@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>🔮 Fortune Teller</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Varela+Round" rel="stylesheet"> 
+    <style>
+        body {
+            background-color: #f5f5f5;
+background-image: url("data:image/svg+xml,%3Csvg width='80' height='88' viewBox='0 0 80 88' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 21.91V26h-2c-9.94 0-18 8.06-18 18 0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73 3.212-6.99 9.983-12.008 18-12.73V62h2c9.94 0 18-8.06 18-18 0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73-3.212 6.99-9.983 12.008-18 12.73zM54 58v4.696c-5.574 1.316-10.455 4.428-14 8.69-3.545-4.262-8.426-7.374-14-8.69V58h-5.993C12.27 58 6 51.734 6 44c0-7.732 6.275-14 14.007-14H26v-4.696c5.574-1.316 10.455-4.428 14-8.69 3.545 4.262 8.426 7.374 14 8.69V30h5.993C67.73 30 74 36.266 74 44c0 7.732-6.275 14-14.007 14H54zM42 88c0-9.94 8.06-18 18-18h2v-4.09c8.016-.722 14.787-5.738 18-12.73v7.434c-3.545 4.262-8.426 7.374-14 8.69V74h-5.993C52.275 74 46 80.268 46 88h-4zm-4 0c0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73v7.434c3.545 4.262 8.426 7.374 14 8.69V74h5.993C27.73 74 34 80.266 34 88h4zm4-88c0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73v-7.434c-3.545-4.262-8.426-7.374-14-8.69V14h-5.993C52.27 14 46 7.734 46 0h-4zM0 34.82c3.213-6.992 9.984-12.008 18-12.73V18h2c9.94 0 18-8.06 18-18h-4c0 7.732-6.275 14-14.007 14H14v4.696c-5.574 1.316-10.455 4.428-14 8.69v7.433z' fill='%23c2a7ed' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+        
+        }
+        h1, p {
+            /* font-family: 'Varela Round', sans-serif; */
+            font-family: 'Pacifico', cursive;
+        }
+        p {
+            margin-bottom: 0px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .wrapper {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .container {
+            padding: 5px;
+            border: 2px solid coral;
+            position: relative;
+            /* min-width: 800px; */
+            min-height: 400px;
+            text-align: center;
+        }
+        .fortune-wrap {
+            min-height: 200px;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 350px;
+            }
+        }
+        .footer {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+        }
+        .pulse-button {
+  position: relative;
+  /* top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  font-size: 1.3em;
+  font-weight: light;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100px;
+  letter-spacing: -1px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background: #5a99d4;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5); */
+  -webkit-animation: pulse 3.5s infinite;
+  padding: 5px;
+border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+font-family: 'Varela Round', sans-serif;
+}
+
+.pulse-button:hover {
+  -webkit-animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner-wrap">
+            <div class="container">
+                <div class="fortune-wrap">
+                        <h1>In the Future you will <span id="target"></span> </h1>
+                </div>
+                <div>
+                    <button id="button" class="pulse-button">✨what is my fortune?✨</button>
+                </div>
+                <div class="footer">
+                        <p>made by <a href="mailto:nudgechris@gmail.com">neeka and chris</a></p>
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+
+    <script>
+        var verbs = ["kill", "marry", "wish for", "kiss", "lick", "smell", "hit", "fuck", "kick", "touch", "fall in love with", "smooch", "have sex with", "talk to", "fight", "find", "outrun", "upstage", "bewitch", "hold hands with", "dance with", "sing to", "ask out", "disturb", "imagine", "in a line up, need to identify", "become dear friends with", "become mortal enemies with", "become more beautiful than", "become", "win a race against", "win an argument with", "get into an agreement with", "win an arm wrestling match to", "lose an arm wrestling match to", "make spaghetti with", "eat ice cream with", "light a candle with", "apply suntan lotion to", "cook with", "cook for", "cook", "forget about", "remember", "sign a prenuptial agreement with", "become the beneficiary in the will of", "have a heart-to-heart talk with", "attend rehab with", "go to an AA meeting with", "be the guest on Fresh Air with", "meet an important deadline with", "cheat on an exam with", "pee in a cup for", "poop on", "pee on", "take a shower with", "get pooped on by", "get peed on by", "go out to movie and a dinner with", "make a mistake by eating"];
+        var predicates = ["a parakeet", "the three musketeers", "a tomato", "hot sauce", "your favorite celebrity", "solar panels", "your mother", "your father", "Elon Musk", "a hat", "the candlestick maker", "the baker", "the blacksmith", "a bartender", "the busboy at chilis", "that waiter who winked at you one time", "the universe", "god", "the devil", "everyone you know", "everything you touch", "angels", "Leonardo d caprio", "the sinking titanic", "your favorite pet", "your moms casserole", "Picasso", "a bad remake of Die Hard starring Brad Pitt instead of Bruce Willace", "meat gone bad", "a basket full of spiders", "a shopping cart full of chef boy Ardee", "the karate kid", "your soulmate", "that guy from Pizza Hut with acne", "the whole football team", "your high school crush", "your favorite shoes", "Beyoncé’s nipples"];
+        
+        var button = document.getElementById("button");
+        var target = document.getElementById("target");
+
+        button.addEventListener("click", function(event){
+        event.preventDefault();
+        predictFortune();
+        }); 
+        function rand(min, max) {
+            let random_number = Math.random() * (max-min) + min;
+            return Math.floor(random_number);
+        }
+        function rando(array) {
+            return array[rand(0, array.length)];
+        }
+
+
+        function predictFortune() {
+            var fortune = rando(verbs) + " " + rando(predicates);
+            target.innerHTML = fortune;
+        }
+
+    </script>
+</body>
+</html>
